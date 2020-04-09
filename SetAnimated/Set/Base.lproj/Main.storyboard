@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-X4-Jpy">
+                                <rect key="frame" x="20" y="44" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="rxH-Wh-YiG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="H2W-pD-Tyn" customClass="CardGridView" customModule="Set" customModuleProvider="target">
+                                <rect key="frame" x="20" y="96" width="374" height="671"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-z6-bqw" customClass="DeckView" customModule="Set" customModuleProvider="target">
+                                <rect key="frame" x="20" y="775" width="374" height="87"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="6bc-4U-If7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ApB-z6-bqw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1dg-5j-RRb"/>
+                            <constraint firstItem="ApB-z6-bqw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="20x-l3-fAT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H2W-pD-Tyn" secondAttribute="trailing" constant="20" id="AJe-Dy-baB"/>
+                            <constraint firstItem="ApB-z6-bqw" firstAttribute="top" secondItem="H2W-pD-Tyn" secondAttribute="bottom" constant="8" id="SrS-dc-wKe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ApB-z6-bqw" secondAttribute="trailing" constant="20" id="X1S-bh-aeP"/>
+                            <constraint firstItem="fO0-X4-Jpy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XO9-Ja-eXy"/>
+                            <constraint firstItem="H2W-pD-Tyn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="daq-be-tUd"/>
+                            <constraint firstItem="fO0-X4-Jpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mTN-OS-Vi5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fO0-X4-Jpy" secondAttribute="trailing" constant="20" id="psV-hQ-8nT"/>
+                            <constraint firstItem="H2W-pD-Tyn" firstAttribute="top" secondItem="fO0-X4-Jpy" secondAttribute="bottom" id="tG2-Xd-IxH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardGridView" destination="H2W-pD-Tyn" id="O3f-Ox-dOr"/>
+                        <outlet property="deckPlaceholder" destination="ApB-z6-bqw" id="vZ3-wY-lPf"/>
+                        <outlet property="heading" destination="fO0-X4-Jpy" id="SFR-4C-0lq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171.01449275362319" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>
